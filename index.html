@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ATHOS Impressão 3D</title>
+<title>ATHOS Impressão 3D | Produtos Personalizados e Protótipos</title>
+
+<meta name="description" content="ATHOS Impressão 3D - Produção de peças personalizadas, decoração geek, brindes corporativos, protótipos e soluções em impressão 3D.">
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -14,23 +18,24 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
 font-family:'Poppins',sans-serif;
 background:#0A0A0A;
-color:white;
+color:#fff;
 }
 
 header{
-background:#000;
-padding:20px 5%;
-display:flex;
-justify-content:space-between;
-align-items:center;
 position:sticky;
 top:0;
 z-index:1000;
+background:#000;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
 border-bottom:1px solid #222;
 }
 
@@ -44,9 +49,10 @@ gap:15px;
 height:70px;
 }
 
-.logo h1{
+.logo-text{
 font-family:'Orbitron',sans-serif;
-font-size:1.5rem;
+font-weight:700;
+font-size:1.4rem;
 }
 
 nav a{
@@ -54,7 +60,7 @@ color:white;
 text-decoration:none;
 margin-left:25px;
 font-weight:500;
-transition:.3s;
+transition:0.3s;
 }
 
 nav a:hover{
@@ -64,31 +70,35 @@ color:#1E88FF;
 .hero{
 min-height:90vh;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
-padding:50px 20px;
-background:linear-gradient(180deg,#000,#111);
+padding:40px;
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1400&q=80');
+background-size:cover;
+background-position:center;
 }
 
 .hero-content{
 max-width:900px;
 }
 
-.hero img{
-width:280px;
+.hero-logo{
+width:260px;
 margin-bottom:30px;
 }
 
-.hero h2{
-font-size:3rem;
+.hero h1{
 font-family:'Orbitron',sans-serif;
+font-size:3rem;
 margin-bottom:20px;
 }
 
 .hero p{
 font-size:1.2rem;
-color:#C7C7C7;
+color:#ddd;
 margin-bottom:35px;
 }
 
@@ -99,7 +109,7 @@ margin:10px;
 background:#1E88FF;
 color:white;
 text-decoration:none;
-border-radius:8px;
+border-radius:10px;
 font-weight:600;
 transition:.3s;
 }
@@ -114,11 +124,19 @@ padding:80px 10%;
 }
 
 .section-title{
+font-family:'Orbitron',sans-serif;
 text-align:center;
 font-size:2.5rem;
-font-family:'Orbitron',sans-serif;
 margin-bottom:50px;
 color:#1E88FF;
+}
+
+.sobre{
+max-width:1000px;
+margin:auto;
+text-align:center;
+font-size:1.1rem;
+line-height:1.8;
 }
 
 .cards{
@@ -131,7 +149,7 @@ gap:25px;
 background:#151515;
 padding:30px;
 border-radius:15px;
-border:1px solid #2a2a2a;
+border:1px solid #252525;
 transition:.3s;
 }
 
@@ -145,22 +163,22 @@ margin-bottom:15px;
 color:#1E88FF;
 }
 
-.processo{
+.etapas{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
 }
 
 .etapa{
 background:#151515;
-padding:25px;
+padding:30px;
 border-radius:15px;
 text-align:center;
 }
 
 .etapa h3{
+margin-bottom:15px;
 color:#1E88FF;
-margin-bottom:10px;
 }
 
 .formulario{
@@ -173,21 +191,24 @@ margin:auto;
 width:100%;
 padding:15px;
 margin-bottom:15px;
+border:none;
+border-radius:10px;
 background:#151515;
-border:1px solid #333;
 color:white;
-border-radius:8px;
+border:1px solid #333;
 }
 
 .formulario button{
 width:100%;
-padding:15px;
+padding:16px;
 background:#1E88FF;
-border:none;
 color:white;
+border:none;
+border-radius:10px;
 font-size:1rem;
-border-radius:8px;
+font-weight:600;
 cursor:pointer;
+transition:.3s;
 }
 
 .formulario button:hover{
@@ -201,6 +222,10 @@ text-align:center;
 border-top:1px solid #222;
 }
 
+footer h3{
+margin-bottom:15px;
+}
+
 .whatsapp{
 position:fixed;
 right:20px;
@@ -211,22 +236,28 @@ padding:15px 20px;
 border-radius:50px;
 font-weight:bold;
 text-decoration:none;
-box-shadow:0 5px 20px rgba(0,0,0,.3);
+box-shadow:0 5px 20px rgba(0,0,0,.4);
+z-index:999;
 }
 
 @media(max-width:768px){
-
-.hero h2{
-font-size:2rem;
-}
 
 nav{
 display:none;
 }
 
+.hero h1{
+font-size:2rem;
+}
+
+.hero-logo{
+width:180px;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
@@ -235,7 +266,7 @@ display:none;
 
 <div class="logo">
 <img src="logo.png" alt="ATHOS">
-<h1>ATHOS 3D</h1>
+<div class="logo-text">ATHOS 3D</div>
 </div>
 
 <nav>
@@ -251,20 +282,18 @@ display:none;
 
 <div class="hero-content">
 
-<img src="logo.png" alt="ATHOS">
+<img src="logo.png" class="hero-logo" alt="ATHOS">
 
-<h2>Transformamos Ideias em Produtos Reais</h2>
+<h1>Transformamos Ideias em Produtos Reais</h1>
 
 <p>
-Produção de peças personalizadas, decoração,
-protótipos, brindes corporativos e soluções em impressão 3D.
+Produção de peças personalizadas, decoração geek, protótipos,
+brindes corporativos e soluções profissionais em impressão 3D.
 </p>
 
 <a href="#orcamento" class="btn">Solicitar Orçamento</a>
 
-<a href="#produtos" class="btn">
-Ver Catálogo
-</a>
+<a href="#produtos" class="btn">Ver Produtos</a>
 
 </div>
 
@@ -274,9 +303,15 @@ Ver Catálogo
 
 <h2 class="section-title">Sobre a ATHOS</h2>
 
-<p style="text-align:center;max-width:900px;margin:auto;">
-A ATHOS Impressão 3D utiliza tecnologia de ponta para transformar projetos digitais em produtos físicos de alta qualidade. Produzimos peças decorativas, funcionais, personalizadas e protótipos sob demanda.
-</p>
+<div class="sobre">
+
+A ATHOS Impressão 3D oferece soluções modernas para fabricação de peças
+personalizadas, protótipos, decoração, brindes corporativos e projetos exclusivos.
+
+Utilizamos tecnologia de impressão 3D de alta precisão para transformar sua ideia
+em um produto real com qualidade profissional.
+
+</div>
 
 </section>
 
@@ -288,17 +323,17 @@ A ATHOS Impressão 3D utiliza tecnologia de ponta para transformar projetos digi
 
 <div class="card">
 <h3>Decoração Geek</h3>
-<p>Miniaturas, bustos, personagens e colecionáveis.</p>
+<p>Miniaturas, personagens, bustos e colecionáveis.</p>
 </div>
 
 <div class="card">
-<h3>Organização</h3>
-<p>Suportes, organizadores e acessórios.</p>
+<h3>Brindes Corporativos</h3>
+<p>Chaveiros, logotipos e brindes personalizados.</p>
 </div>
 
 <div class="card">
-<h3>Brindes</h3>
-<p>Produtos personalizados para empresas.</p>
+<h3>Peças Técnicas</h3>
+<p>Soluções funcionais para empresas e profissionais.</p>
 </div>
 
 <div class="card">
@@ -314,26 +349,26 @@ A ATHOS Impressão 3D utiliza tecnologia de ponta para transformar projetos digi
 
 <h2 class="section-title">Como Funciona</h2>
 
-<div class="processo">
+<div class="etapas">
 
 <div class="etapa">
 <h3>1. Envie sua Ideia</h3>
-<p>Fotos, desenhos ou arquivos STL.</p>
+<p>Foto, desenho, modelo ou arquivo STL.</p>
 </div>
 
 <div class="etapa">
-<h3>2. Produção</h3>
-<p>Modelagem e impressão profissional.</p>
+<h3>2. Desenvolvimento</h3>
+<p>Modelagem e preparação do projeto.</p>
 </div>
 
 <div class="etapa">
-<h3>3. Acabamento</h3>
-<p>Revisão e preparação da peça.</p>
+<h3>3. Impressão</h3>
+<p>Produção em impressoras 3D de alta qualidade.</p>
 </div>
 
 <div class="etapa">
 <h3>4. Entrega</h3>
-<p>Envio para todo o Brasil.</p>
+<p>Retirada ou envio para todo Brasil.</p>
 </div>
 
 </div>
@@ -346,16 +381,16 @@ A ATHOS Impressão 3D utiliza tecnologia de ponta para transformar projetos digi
 
 <div class="formulario">
 
-<input type="text" placeholder="Nome">
+<input type="text" id="nome" placeholder="Nome Completo">
 
-<input type="tel" placeholder="Telefone">
+<input type="tel" id="telefone" placeholder="Telefone / WhatsApp">
 
-<input type="email" placeholder="E-mail">
+<input type="email" id="email" placeholder="E-mail">
 
-<textarea rows="6" placeholder="Descreva seu projeto"></textarea>
+<textarea id="mensagem" rows="6" placeholder="Descreva seu projeto"></textarea>
 
-<button>
-Solicitar Orçamento
+<button onclick="enviarWhatsApp()">
+Solicitar Orçamento pelo WhatsApp
 </button>
 
 </div>
@@ -369,17 +404,55 @@ Solicitar Orçamento
 <p>Caxias do Sul - RS</p>
 
 <p>
-Peças Personalizadas • Protótipos • Brindes • Decoração
+Peças Personalizadas • Protótipos • Brindes • Decoração Geek
 </p>
 
 </footer>
 
 <a
 class="whatsapp"
-href="https://wa.me/5554999999999"
+href="https://wa.me/5554991674077"
 target="_blank">
 WhatsApp
 </a>
+
+<script>
+
+function enviarWhatsApp(){
+
+let nome = document.getElementById("nome").value;
+let telefone = document.getElementById("telefone").value;
+let email = document.getElementById("email").value;
+let mensagem = document.getElementById("mensagem").value;
+
+if(nome === "" || telefone === ""){
+
+alert("Preencha Nome e Telefone.");
+
+return;
+
+}
+
+let texto =
+`*NOVO ORÇAMENTO - ATHOS IMPRESSÃO 3D*
+
+👤 Nome: ${nome}
+
+📞 Telefone: ${telefone}
+
+📧 E-mail: ${email}
+
+📝 Projeto:
+${mensagem}`;
+
+window.open(
+"https://wa.me/5554991674077?text=" + encodeURIComponent(texto),
+"_blank"
+);
+
+}
+
+</script>
 
 </body>
 </html>
