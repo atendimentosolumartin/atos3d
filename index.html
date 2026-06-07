@@ -454,5 +454,24 @@ window.open(
 
 </script>
 
+<script>
+
+// Impede que o navegador restaure a posição anterior
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
+// Sempre inicia a página no topo
+window.addEventListener('load', function () {
+    window.scrollTo(0, 0);
+});
+
+// Garante que ao atualizar (F5) também volte ao topo
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+};
+
+</script>
+
 </body>
 </html>
