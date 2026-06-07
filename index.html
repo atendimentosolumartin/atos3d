@@ -459,20 +459,42 @@ window.open(
 
 <script>
 
-// Impede que o navegador restaure a posição anterior
+<script>
+
+// força abrir sempre no topo
 if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
 }
 
-// Sempre inicia a página no topo
-window.addEventListener('load', function () {
+function iniciarNoTopo() {
+
+    if (window.location.hash) {
+
+        history.replaceState(
+            null,
+            null,
+            window.location.pathname
+        );
+
+    }
+
     window.scrollTo(0, 0);
+
+}
+
+document.addEventListener('DOMContentLoaded', iniciarNoTopo);
+
+window.addEventListener('load', function () {
+
+    iniciarNoTopo();
+
+    setTimeout(iniciarNoTopo, 100);
+    setTimeout(iniciarNoTopo, 500);
+    setTimeout(iniciarNoTopo, 1000);
+
 });
 
-// Garante que ao atualizar (F5) também volte ao topo
-window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-};
+</script>
 
 </script>
 
